@@ -1,0 +1,38 @@
+{
+  "name": "isn.status",
+  "version": "0.0.1",
+  "main": "lib/status.js",
+  "description": "Simple Logger.",
+  "homepage": "http://github.com/iissnan/isn.status",
+  "bugs": "https://github.com/iissnan/isnstatus/issues",
+  "author": {
+    "name": "iissnan",
+    "email": "iissnan@gmail.com",
+    "url": "http://iissnan.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iissnan/isnstatus"
+  },
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "isnstatus",
+    "logger",
+    " status",
+    " iissnan"
+  ],
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1",
+    "jshint-stylish": "^0.2.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  }
+}
