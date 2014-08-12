@@ -2,7 +2,7 @@
   "name": "subot",
   "version": "0.0.1",
   "main": "lib/subot.js",
-  "description": "A service robot reporting status of the application.",
+  "description": "A service robot reporting the status of the application.",
   "homepage": "http://github.com/iissnan/subot",
   "bugs": "https://github.com/iissnan/subot/issues",
   "author": {
@@ -25,12 +25,13 @@
     "subot"
   ],
   "devDependencies": {
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-nodeunit": "^0.3.3",
-    "grunt-contrib-watch": "^0.6.1",
-    "load-grunt-tasks": "^0.4.0",
-    "time-grunt": "^0.3.1",
-    "jshint-stylish": "^0.2.0"
+   "gulp": "*",
+   "gulp-jshint": "*",
+   "gulp-mocha": "*",
+   "coffee-script": "*",
+   "chai": "*",
+   "mocha": "*",
+   "jshint-stylish": "^0.2.0"
   },
   "scripts": {
     "test": "grunt"
