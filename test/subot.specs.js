@@ -13,7 +13,7 @@ describe('log', function () {
     sinon.stub(console, 'log', function () {});
 
     subot.log('foo').should.equal(
-      '[' + chalk.gray('log') + '] foo'
+      '[' + chalk.gray('LOG') + '] foo'
     );
 
     console.log.restore();
@@ -23,7 +23,7 @@ describe('log', function () {
     sinon.stub(console, 'log', function () {});
 
     subot.info('foo').should.equal(
-      '[' + chalk.blue('info') + '] foo'
+      '[' + chalk.blue('INFO') + '] foo'
     );
 
     console.log.restore();
@@ -33,7 +33,7 @@ describe('log', function () {
     sinon.stub(console, 'log', function () {});
 
     subot.warn('foo').should.equal(
-      '[' + chalk.yellow('warn') + '] foo'
+      '[' + chalk.yellow('WARN') + '] foo'
     );
 
     console.log.restore();
@@ -43,7 +43,7 @@ describe('log', function () {
     sinon.stub(console, 'log', function () {});
 
     subot.error('foo').should.equal(
-      '[' + chalk.red('error') + '] foo'
+      '[' + chalk.red('ERROR') + '] foo'
     );
 
     console.log.restore();

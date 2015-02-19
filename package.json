@@ -1,6 +1,6 @@
 {
   "name": "subot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/subot.js",
   "description": "Simple wrapper of console.log with formated style.",
   "homepage": "http://github.com/iissnan/subot",
