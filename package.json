@@ -2,7 +2,7 @@
   "name": "subot",
   "version": "0.0.1",
   "main": "lib/subot.js",
-  "description": "A service robot reporting the status of the application.",
+  "description": "Simple wrapper of console.log with formated style.",
   "homepage": "http://github.com/iissnan/subot",
   "bugs": "https://github.com/iissnan/subot/issues",
   "author": {
@@ -22,21 +22,24 @@
     "logger",
     "status",
     "iissnan",
-    "subot"
+    "subot",
+    "console.log"
   ],
   "devDependencies": {
-   "gulp": "*",
-   "gulp-jshint": "*",
-   "gulp-mocha": "*",
-   "coffee-script": "*",
-   "chai": "*",
-   "mocha": "*",
-   "jshint-stylish": "^0.2.0"
+    "gulp": "*",
+    "gulp-jshint": "*",
+    "gulp-mocha": "*",
+    "coffee-script": "*",
+    "chai": "*",
+    "mocha": "*",
+    "jshint-stylish": "^0.2.0",
+    "sinon": "^1.12.2"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "gulp test"
   },
   "dependencies": {
+    "chalk": "^0.5.1",
     "type.is": "*"
   }
 }

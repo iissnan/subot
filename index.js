@@ -1,1 +1,1 @@
-module.exports = require('./lib/subot.js");
+module.exports = require('./lib/subot.js');
