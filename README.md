@@ -1,7 +1,7 @@
-Simple wrapper of console.log with formated style.
+Simple wrapper of console.log with formatted style for Node.js.
 
-```
-var subot = require('subot');
+```js
+const subot = require('subot');
 
 subot.log('Hello');
 // [LOG] Hello
@@ -14,5 +14,4 @@ subot.warn('Hello');
 
 subot.error('Hello');
 // [ERROR] Hello
-
 ```

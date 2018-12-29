@@ -1,52 +1,48 @@
-/* globals describe: true, it: true */
-/* exported should */
+const { describe, it } = require('mocha');
+const chalk = require('chalk');
+const { expect } = require('chai');
+const subot = require('../');
 
-var chalk = require('chalk');
-var should = require('chai').should();
-var sinon = require('sinon');
+describe('Subot', function () {
 
-var subot = require('../lib/subot');
-
-describe('log', function () {
-
-  it('#log()', function () {
-    sinon.stub(console, 'log', function () {});
-
-    subot.log('foo').should.equal(
-      '[' + chalk.gray('LOG') + '] foo'
-    );
-
-    console.log.restore();
+  it('text()', () => {
+    expect(subot.text('foo')).to.equal(`foo`);
+    expect(subot.text('foo', 2)).to.equal(`  foo`);
   });
 
-  it('#info()', function () {
-    sinon.stub(console, 'log', function () {});
-
-    subot.info('foo').should.equal(
-      '[' + chalk.blue('INFO') + '] foo'
-    );
-
-    console.log.restore();
+  it('log()', function () {
+    expect(subot.log('foo')).to.equal(`[${chalk.gray('LOG')}] foo`);
+    expect(subot.log('foo', 2)).to.equal(`  [${chalk.gray('LOG')}] foo`);
   });
 
-  it('#warn()', function () {
-    sinon.stub(console, 'log', function () {});
-
-    subot.warn('foo').should.equal(
-      '[' + chalk.yellow('WARN') + '] foo'
-    );
-
-    console.log.restore();
+  it('info()', function () {
+    expect(subot.info('foo')).to.equal(`[${chalk.blue('INFO')}] foo`);
+    expect(subot.info('foo', 3)).to.equal(`   [${chalk.blue('INFO')}] foo`);
   });
 
-  it('#error()', function () {
-    sinon.stub(console, 'log', function () {});
+  it('warn()', function () {
+    expect(subot.warn('foo')).to.equal(`[${chalk.yellow('WARN')}] foo`);
+    expect(subot.warn('foo', 4)).to.equal(`    [${chalk.yellow('WARN')}] foo`);
+  });
 
-    subot.error('foo').should.equal(
-      '[' + chalk.red('ERROR') + '] foo'
-    );
+  it('error()', function () {
+    expect(subot.error('foo')).to.equal(`[${chalk.red('ERROR')}] foo`);
+    expect(subot.error('foo', 5)).to.equal(`     [${chalk.red('ERROR')}] foo`);
+  });
 
-    console.log.restore();
+  it('success()', function () {
+    expect(subot.success('foo')).to.equal(`[${chalk.green('SUCCESS')}] foo`);
+    expect(subot.success('foo', 6)).to.equal(`      [${chalk.green('SUCCESS')}] foo`);
+  });
+
+  it('ok()', function () {
+    expect(subot.ok('foo')).to.equal(`[${chalk.green('OK')}] foo`);
+    expect(subot.ok('foo', 7)).to.equal(`       [${chalk.green('OK')}] foo`);
+  });
+
+  it('done()', function () {
+    expect(subot.done('foo')).to.equal(`[${chalk.green('DONE')}] foo`);
+    expect(subot.done('foo', 8)).to.equal(`        [${chalk.green('DONE')}] foo`);
   });
 
 });
